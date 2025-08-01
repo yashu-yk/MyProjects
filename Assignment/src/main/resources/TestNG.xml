@@ -1,0 +1,34 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name = "Amazon Testing" parallel="tests">
+   
+   <listeners>
+		<listener  
+   			class-name="com.extentReport.ExtentReportListener"/>
+   </listeners>
+   
+   
+   <test name = "Account Validation chrome">
+   <parameter name="browser" value="chrome"></parameter>
+      <classes>
+      	 <class name = "com.testcases.booksPageTest"/>
+         <class name = "com.testcases.homepageTest"/>
+         <class name = "com.testcases.dataProviderPageTest"/>
+         <class name = "com.testcases.instagramPageTest"/>
+         
+      </classes>
+   </test>
+   
+   
+   <test name = "Account Validation firefox">
+    <parameter name="browser" value="firefox"></parameter>
+      <classes>
+      	 <class name = "com.testcases.booksPageTest"/>
+         <class name = "com.testcases.homepageTest"/>
+         <class name = "com.testcases.dataProviderPageTest"/>
+         <class name = "com.testcases.instagramPageTest"/>
+         
+      </classes>
+   </test>
+</suite>
